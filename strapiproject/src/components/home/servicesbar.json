@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_servicesbars",
+  "info": {
+    "displayName": "servicesbar"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

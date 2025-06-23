@@ -1,5 +1,38 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface HomeBestsellers extends Struct.ComponentSchema {
+  collectionName: 'components_home_bestsellers';
+  info: {
+    displayName: 'bestsellers';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeCollection extends Struct.ComponentSchema {
+  collectionName: 'components_home_collections';
+  info: {
+    displayName: 'collection';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HomeFeatured extends Struct.ComponentSchema {
+  collectionName: 'components_home_featureds';
+  info: {
+    displayName: 'featured';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeHerosecton extends Struct.ComponentSchema {
   collectionName: 'components_home_herosectons';
   info: {
@@ -12,14 +45,24 @@ export interface HomeHerosecton extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeOriginal extends Struct.ComponentSchema {
+  collectionName: 'components_home_originals';
+  info: {
+    displayName: 'original';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomeServicesbar extends Struct.ComponentSchema {
   collectionName: 'components_home_servicesbars';
   info: {
     displayName: 'servicesbar';
   };
   attributes: {
-    color: Schema.Attribute.String;
-    icon: Schema.Attribute.Media<'images' | 'files'>;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
@@ -89,7 +132,11 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'home.bestsellers': HomeBestsellers;
+      'home.collection': HomeCollection;
+      'home.featured': HomeFeatured;
       'home.herosecton': HomeHerosecton;
+      'home.original': HomeOriginal;
       'home.servicesbar': HomeServicesbar;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

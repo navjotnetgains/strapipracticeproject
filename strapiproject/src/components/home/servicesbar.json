@@ -5,19 +5,18 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
     "icon": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
         "images",
-        "files"
+        "files",
+        "videos",
+        "audios"
       ]
-    },
-    "title": {
-      "type": "string"
-    },
-    "color": {
-      "type": "string"
     }
   },
   "config": {}

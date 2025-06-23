@@ -20,6 +20,26 @@
       "type": "component",
       "component": "home.servicesbar",
       "repeatable": false
+    },
+    "collection": {
+      "type": "component",
+      "component": "home.collection",
+      "repeatable": true
+    },
+    "featured": {
+      "type": "component",
+      "component": "home.featured",
+      "repeatable": true
+    },
+    "bestsellers": {
+      "type": "component",
+      "component": "home.bestsellers",
+      "repeatable": true
+    },
+    "original": {
+      "type": "component",
+      "component": "home.original",
+      "repeatable": true
     }
   }
 }
